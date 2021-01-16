@@ -9875,13 +9875,328 @@ h3 {
     border-color: #dee2e6;
   }
 }
-h1 {
-  color: blueviolet;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body {
+@keyframes color-barras {
+  0% {
+    fill: #fadfda;
+  }
+  50% {
+    fill: #f4baae;
+  }
+  100% {
+    fill: #ee9480;
+  }
+}
+.contenedor__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+.contenedor__menu__lista {
+  display: flex;
+  list-style: none;
+  margin-left: 10%;
+}
+.contenedor__menu__lista li {
+  padding-right: 20px;
+  font-family: "Opensans", sans-serif;
+}
+.contenedor__menu__botones {
+  display: flex;
+  text-align: right;
+  margin-right: 10%;
+}
+
+@media (max-width: 992px) {
+  .lista-2,
+.lista-3,
+.lista-4,
+.button_secundary,
+.button_regular {
+    display: none;
+  }
+
+  .button-burguer {
+    display: flex;
+    justify-content: space-around;
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .button-burguer {
+    display: none;
+    background-color: none;
+  }
+}
+main {
+  height: 75vh;
+}
+
+.contenedor__principal {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  margin-top: 10%;
+  background-image: url(/assets/img/bg-hero.svg);
+}
+.contenedor__principal--textos {
+  width: 30%;
+  margin: 0 10%;
+}
+
+.titulo {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+.texto {
+  width: 100%;
+  font-size: 16px;
+  font-family: "Opensans", sans-serif;
+}
+
+@media (max-width: 992px) {
+  .contenedor__principal {
+    height: 77vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: bottom;
+    margin-top: 10%;
+  }
+  .contenedor__principal--textos {
+    width: 80%;
+  }
+}
+.contenedor__copyright {
+  background-color: #221d23;
+  width: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 3rem;
+}
+.contenedor__copyright ul {
+  display: flex;
+  list-style: none;
+}
+.contenedor__copyright ul li {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .contenedor__copyright {
+    background-color: #221d23;
+    width: 100%;
+    color: #fff;
+    display: inline;
+    justify-content: space-between;
+    padding: 1.5rem 1.5rem;
+    text-align: center;
+  }
+  .contenedor__copyright ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+  }
+  .contenedor__copyright p {
+    text-align: center;
+  }
+}
+.contenedor {
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(5, auto);
+  margin: 0;
+}
+
+@media (min-width: 320px) {
+  .contenedor {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    margin: 0;
+  }
+}
+.contenedor__caracteristicas {
+  height: 100vh;
+  padding-top: 14rem;
+}
+.contenedor__caracteristicas--titulo {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 0;
+}
+.contenedor__caracteristicas--contenido {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor__caracteristicas--contenido > * {
+  width: 40%;
+}
+.contenedor__caracteristicas--contenido h4 {
+  font-family: "Raleway", sans-serif;
+}
+.contenedor__caracteristicas--contenido p {
+  font-family: "Opensans", sans-serif;
+}
+
+.a-bar {
+  animation: color-barras 2s infinite;
+}
+
+@media (max-width: 768px) {
+  .contenedor__caracteristicas {
+    height: 100vh;
+    padding-top: 1rem;
+  }
+  .contenedor__caracteristicas--titulo {
+    margin: 1rem 0;
+    padding-bottom: 3rem;
+  }
+  .contenedor__caracteristicas--contenido {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .contenedor__caracteristicas--contenido > * {
+    display: inline;
+    width: 80%;
+    margin: 0 10%;
+    padding-bottom: 3rem;
+  }
+}
+.contenedor__precios {
+  background-image: url(/assets/img/bg-price.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 3rem;
+}
+.contenedor__precios__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contenedor__precios--bg {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.contenedor__precios--titulo {
+  font-family: "Raleway", sans-serif;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5.5rem 0 1rem 0;
+  padding: 6rem 0 0 0;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .contenedor__precios__row {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.button_regular {
+  color: #fff;
+  background-color: #2ab7ca;
+  font-family: "Opensans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 5px 20px;
+  border: none;
+  transition: all linear 200ms;
+}
+
+.button_regular:hover {
+  color: #221d23;
+  background-color: #b1e4eb;
+}
+
+.button_lg {
+  color: #fff;
+  background-color: #2ab7ca;
+  font-family: "Opensans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  width: 100%;
+  padding: 5px;
+  border: none;
+  transition: all linear 200ms;
+}
+
+.button_lg:hover {
+  color: #221d23;
+  background-color: #b1e4eb;
+}
+
+.button_secundary {
+  color: #221d23;
+  background-color: #fff;
+  font-family: "Opensans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.contenedor__precios__row--tarjeta {
+  background-color: #fff;
+  width: 100%;
+  padding: 3rem 3rem 2rem 3rem;
+}
+.contenedor__precios__row--tarjeta:hover {
+  box-shadow: 5px 5px 18px #221d23;
+}
+.contenedor__precios__row--tarjeta ul {
+  height: 10rem;
+  font-family: "Opensans", sans-serif;
+  line-height: 2rem;
+}
+
+.titulo-tarjeta {
+  font-family: "Opensans", sans-serif;
+  font-size: 30px;
+}
+
+.precio-tarjeta {
+  font-family: "Raleway", sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .contenedor__precios__row--tarjeta {
+    width: 60%;
+    margin: 0 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contenedor__precios__row--tarjeta {
+    width: 30%;
+    margin: 0 1.5rem;
+    transition: all linear 200ms;
+  }
+
+  .contenedor__precios__row--tarjeta:hover {
+    transform: scale(1.01);
+    margin: 0 1.5rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

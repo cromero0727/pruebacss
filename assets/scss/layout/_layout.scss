@@ -3,7 +3,18 @@
 @import 'main';
 @import 'footer';
 @import 'forms';
-body {
+.contenedor {
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(5, auto);
+    margin: 0;
+}
+
+@media (min-width: 320px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        margin: 0;
+    }
 }
